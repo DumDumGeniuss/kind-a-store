@@ -1,0 +1,6 @@
+public/dist
+npm-debug.log
+.env
+.DS_Store
+node_modules
+webpack-assets.json

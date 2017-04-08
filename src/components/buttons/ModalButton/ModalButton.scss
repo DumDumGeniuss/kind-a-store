@@ -1,0 +1,16 @@
+.mainZone {
+	display: inline;
+}
+
+.modalButton {
+	display: inline-block;
+	background-color: red;
+	border: 1px solid red;
+	border-radius: 15px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.modalButton:hover {
+	color: yellow;
+}
