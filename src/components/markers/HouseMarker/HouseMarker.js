@@ -16,6 +16,7 @@ class HouseMarker extends React.Component {
       lineHeight: this.props.height
     };
     const markerClass = this.props.is_hover ? style.houseMarkerOuter + " " + style.houseMarkerHover : style.houseMarkerOuter
+
     return (
       <div className={style.mainZone}>
         <span style={{width: houseMarkerCustomStyle.width+"px",
