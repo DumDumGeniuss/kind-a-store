@@ -23,7 +23,7 @@ class Layout extends React.Component {
 			<div>
 				<nav className={style.navbar}>
 					<div>
-						<a href="/"></a>
+						<a href="/">Kinda Store</a>
 						<a href="#" className={style.menuIcon} onClick={this._onClick.bind(this)}><img src={menuIcon}/></a>
 					</div>
 				</nav>
