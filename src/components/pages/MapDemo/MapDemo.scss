@@ -24,3 +24,35 @@
 .cardsBar {
 	margin-top: 320px;
 }
+
+.reportModal {
+	position: fixed;
+	display: inline-block;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: none;
+	overflow: auto;
+	height: 80vh;
+}
+
+.reportModal.reportModalPop {
+	display: initial;
+	opacity: 1;
+	animation: fade-in 1s;
+}
+
+.reportModal > img {
+	width: 809px;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
