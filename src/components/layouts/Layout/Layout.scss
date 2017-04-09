@@ -4,7 +4,7 @@
 	width: 100vw;
 	height: 60px;
 	// background-color: #232d38;
-	z-index: 2;
+	z-index: 3;
 }
 
 .navbar > div {
@@ -39,6 +39,7 @@
 
 .menuIcon {
 	float: right;
+	padding-right: 15px;
 }
 
 .menuIcon > img {
@@ -58,33 +59,23 @@
 
 .menu {
 	position: fixed;
-	display: block;
-	background: #ffd800;
+	display: inline-block;
 	right: 0;
+	top: 0;
 	width: 250px;
-	height: 100%;
-	transition: all 0.6s ease-out 0s;
+	height: 100vh;
+	transition: all 0.6s ease;
+	background-color: #ededed;
+	z-index: 2;
 }
 
 .menuHidden {
 	position: fixed;
-	display: block;
-	width: 250px;
-	height: 100%;
+	display: inline-block;
 	right: -250px;
+	top: 0;
+	width: 250px;
+	height: 100vh;
+	background-color: #ededed;
 	transition: all 0.6s ease;
-}
-
-.menu > ul {
-	list-style-type: none;
-	font-size: 20px;
-}
-
-.menuHidden > ul {
-	list-style-type: none;
-	font-size: 20px;
-}
-
-.menu > ul > li > a:hover {
-	cursor: pointer;
 }
