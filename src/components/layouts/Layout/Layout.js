@@ -19,12 +19,13 @@ class Layout extends React.Component {
 	render() {
 		const style = require('./Layout.scss');
 		const menuIcon = require('./hamburger.png');
+		const logo = require('./logo.png');
+						// <a href="#" className={style.menuIcon} onClick={this._onClick.bind(this)}><img src={menuIcon}/></a>
 		return (
 			<div>
 				<nav className={style.navbar}>
 					<div>
-						<a href="/">Kinda Store</a>
-						<a href="#" className={style.menuIcon} onClick={this._onClick.bind(this)}><img src={menuIcon}/></a>
+						<a href="/" className={style.logoIcon}><img src={logo}/></a>
 					</div>
 				</nav>
 				<div className={this.state.menuSwitch ? style.menu : style.menuHidden}>

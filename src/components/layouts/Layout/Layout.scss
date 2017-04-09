@@ -3,7 +3,8 @@
 	top: 0;
 	width: 100vw;
 	height: 60px;
-	background-color: #232d38;
+	// background-color: #232d38;
+	z-index: 2;
 }
 
 .navbar > div {
@@ -14,9 +15,9 @@
 .content {
 	background-color: #232d38;
 	width: 100%;
-	height: 600px;
+	// height: 600px;
 
-	margin-top: 60px;
+	// margin-top: 60px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -43,6 +44,16 @@
 .menuIcon > img {
 	height: 20px;
 	width: 25px;
+}
+
+.logoIcon {
+	float: right;
+	padding: 0px 15px;
+}
+
+.logoIcon > img {
+	width: 106px;
+	height: 36px;
 }
 
 .menu {
