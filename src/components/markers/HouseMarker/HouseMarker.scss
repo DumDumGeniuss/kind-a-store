@@ -14,13 +14,11 @@
 
 .houseMarkerOuter {
   display: inline-block;
+  position: relative;
   border: 2px solid #ededed;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  position: fixed;
-  left: 50px;
-  top: 100px;
 }
 
 .houseMarkerOuter.houseMarkerHover {

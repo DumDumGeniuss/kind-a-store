@@ -24,16 +24,6 @@ class HouseCard extends React.Component {
 			isCardPop: false
 		};
 	}
-	_onMouseEnter(e) {
-		this.setState({
-			isCardPop: !this.state.isCardPop
-		})
-	}
-	_onMouseLeave(e) {
-		this.setState({
-			isCardPop: !this.state.isCardPop
-		})
-	}
 	render() {
 		const style = require('./HouseCard.scss');
 		const modalButtonCustomStyle = {
@@ -42,10 +32,10 @@ class HouseCard extends React.Component {
 			lineHeight: this.props.height
 		};
 
-		const cardClass = this.state.isCardPop || this.props.isCardPop ? style.card + ' ' + style.cardPop : style.card;
+		const cardClass = this.props.isCardPop ? style.card + ' ' + style.cardPop : style.card;
 		return (
 			<div className={style.mainZone}>
-				<div order={this.props.order} onMouseLeave={this._onMouseLeave.bind(this)} onMouseEnter={this._onMouseEnter.bind(this)} style={modalButtonCustomStyle} className={cardClass}>
+				<div order={this.props.order} style={modalButtonCustomStyle} className={cardClass}>
 					<div className={style.titleZone}>
 						<b>
 							<span className={style.priceWord}>

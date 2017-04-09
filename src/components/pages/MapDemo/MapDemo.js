@@ -262,7 +262,6 @@ class MapDemo extends React.Component {
 
 		const bar = document.getElementById('MapDemoCardsBarTotal');
 		bar.scrollLeft = 310 * order;
-		console.log(bar.scrollLeft);
 	}
 	_onChildMouseLeave(key, childProps){
 		const order = childProps.order;
@@ -277,7 +276,26 @@ class MapDemo extends React.Component {
 	_onChildClick(key, childProps) {
 		console.log(childProps);
 	}
+	_onCardMouseEnter(index, e) {
+		this.state.houses[index].isCardPop = true;
+		this.setState({
+			houses: this.state.houses
+		});
+
+		const bar = document.getElementById('MapDemoCardsBarTotal');
+		bar.scrollLeft = 310 * order;
+	}
+	_onCardMouseLeave(index, e) {
+		this.state.houses[index].isCardPop = false;
+		this.setState({
+			houses: this.state.houses
+		});
+
+		const bar = document.getElementById('MapDemoCardsBarTotal');
+		bar.scrollLeft = 310 * order;
+	}
 	render() {
+		const self = this;
 		const style = require('./MapDemo.scss');
 		return (
 			<div className={style.mainZone}>
@@ -304,6 +322,7 @@ class MapDemo extends React.Component {
 										lng={item.lng}
 										width={30}
 										height={30}
+										is_hover={item.isCardPop}
 									/>
 								);
 							})
@@ -315,6 +334,9 @@ class MapDemo extends React.Component {
 						{
 							this.state.houses.map( (item, index) => {
 								return (
+									<div style={{display: 'inline-block'}}
+										onMouseEnter={self._onCardMouseEnter.bind(self, index)}
+										onMouseLeave={self._onCardMouseLeave.bind(self, index)}>
 									<HouseCard
 										key={index}
 										order={index}
@@ -329,6 +351,7 @@ class MapDemo extends React.Component {
 										traffic={item.traffic}
 										consumLevel={item.consumLevel}
 									/>
+									</div>
 								);
 							})
 						}
