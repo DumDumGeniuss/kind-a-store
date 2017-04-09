@@ -122,7 +122,7 @@ const snazzyMapsStyle = [
 ];
 
 
-const coeffecient = 0.004;
+const coeffecient = 0.007;
 const priceCoeffecient = 20000;
 const areaCoeffecient = 40;
 
@@ -132,7 +132,8 @@ const fakeHouses = [
 		traffic: Math.random(),
 		consumLevel: Math.random(),
 		type: '公寓',
-		addresss: '台中市北屯區軍和街455巷10弄26號',
+		age: 22,
+		addresss: '台北市大安區軍和街455巷10弄26號',
 		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
 		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
 		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
@@ -142,8 +143,9 @@ const fakeHouses = [
 		crowd: Math.random(),
 		traffic: Math.random(),
 		consumLevel: Math.random(),
-		type: '雅房',
-		addresss: '台中市北屯區軍和街455巷10弄26號',
+		type: '公寓',
+		age: 4,
+		addresss: '台北市松山區松山路222號5樓',
 		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
 		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
 		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
@@ -153,8 +155,9 @@ const fakeHouses = [
 		crowd: Math.random(),
 		traffic: Math.random(),
 		consumLevel: Math.random(),
-		type: '城堡',
-		addresss: '台中市北屯區軍和街455巷10弄26號',
+		type: '透天',
+		age: 7,
+		addresss: '台北市松山區軍和街455巷10弄26號',
 		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
 		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
 		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
@@ -164,8 +167,33 @@ const fakeHouses = [
 		crowd: Math.random(),
 		traffic: Math.random(),
 		consumLevel: Math.random(),
-		type: '套房',
-		addresss: '台中市北屯區軍和街455巷10弄26號',
+		type: '透天',
+		age: 13,
+		addresss: '台北市中山區中山路222號2樓',
+		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
+		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
+		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
+		lng: 121.5 + Math.random() * coeffecient * (Math.random()>0.5?1:-1)
+	},
+	{
+		crowd: Math.random(),
+		traffic: Math.random(),
+		consumLevel: Math.random(),
+		type: '公寓',
+		age: 19,
+		addresss: '台北市松山區民權西路222號2樓',
+		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
+		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
+		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
+		lng: 121.5 + Math.random() * coeffecient * (Math.random()>0.5?1:-1)
+	},
+	{
+		crowd: Math.random(),
+		traffic: Math.random(),
+		consumLevel: Math.random(),
+		type: '公寓',
+		age: 23,
+		addresss: '台北市信義區基隆路222號2樓',
 		price: 40000 + parseInt(Math.random() * priceCoeffecient * (Math.random()>0.5?1:-1), 10),
 		area: 70 + parseInt(Math.random() * areaCoeffecient * (Math.random()>0.5?1:-1), 10),
 		lat: 25 + Math.random() * coeffecient * (Math.random()>0.5?1:-1),
@@ -315,6 +343,7 @@ class MapDemo extends React.Component {
 											addresss={item.addresss}
 											price={item.price}
 											area={item.area}
+											age={item.age}
 											lat={item.lat}
 											lng={item.lng}
 											isCardPop={item.isCardPop}

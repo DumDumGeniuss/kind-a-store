@@ -16,6 +16,7 @@ class HouseCard extends React.Component {
 			crowd: React.PropTypes.number,
 			traffic: React.PropTypes.number,
 			consumLevel: React.PropTypes.number,
+			age: React.PropTypes.number,
 		};
 	}
 	constructor(props) {
@@ -58,6 +59,9 @@ class HouseCard extends React.Component {
 						<div className={style.tagWordsZone}>
 							<span className={style.tagWord}>
 								{this.props.type}
+							</span>
+							<span className={style.tagWord}>
+								{this.props.age}年
 							</span>
 						</div>
 						<div className={style.barZone}>
