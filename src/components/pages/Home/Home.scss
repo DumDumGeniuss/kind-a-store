@@ -1,18 +1,121 @@
-.box {
-	display: inline-block;
-	border: 2px solid black;
-	border-radius: 10px;
-	margin: 5px;
-	padding: 4px;
+// .box {
+// 	display: inline-block;
+// 	border: 2px solid black;
+// 	border-radius: 10px;
+// 	margin: 5px;
+// 	padding: 4px;
+// }
+// .name {
+// 	display: inline-block;
+// 	color: #5d108e;
+// 	vertical-align: middle;
+// 	font-size: 20px;
+// }
+// .image {
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	width: 20px;
+// }
+
+
+.home {
+	max-width: 1200px;
+	text-align: center;
+	// margin-top: 100px;
+	padding: 100px;
 }
-.name {
-	display: inline-block;
-	color: #5d108e;
-	vertical-align: middle;
-	font-size: 20px;
+
+.logo img {
+	height: 90px;
+	width: 300px;
 }
-.image {
+
+.leftForm {
+	// display: inline-block;
+	position: absolute;
+	top: 8px;
+	left: 15px;
+	margin-top: 40px;
+	width: 50%;
+}
+
+.leftForm select {
+	margin-bottom: 30px;
+	font-size: 15px;
+	height: 40px;
+	width: 100px;
+	text-align: right;
+}
+
+.rightForm {
+	position: absolute;
+	top: 3px;
+	left: 240px;
+	width: 50%;
+}
+
+.rigthForm > div {
 	display: inline-block;
-	vertical-align: middle;
-	width: 20px;
+	width: 100%;
+}
+
+.form {
+	width: 450px;
+	height: 200px;
+	border-radius: 15px;
+	background: #ededed;
+	margin: auto;
+	position: relative;
+	margin-top: 60px;
+}
+
+.text {
+	margin-left: 100px;
+	margin-top: 40px;
+	color: #c1c1c1;
+	margin-right: 25px;
+}
+
+.bar {
+	margin-top: 10px;
+}
+
+.baseBar {
+	height: 5px;
+	width: 150px;
+	border-radius: 5px;
+	background-color: #dcdcdc;
+
+}
+
+.topBarA {
+	height: 5px;
+	width: 50px;
+	border-radius: 5px;
+	background-color: #ffd800;
+	margin-top: -5px;
+	margin-right: 10px;
+}
+
+.topBarB {
+	height: 5px;
+	width: 50px;
+	border-radius: 5px;
+	background-color: #ffd800;
+	margin-top: -5px;
+}
+
+.search {
+	position: absolute;
+	right: -30px;
+	top: 120px;
+}
+
+.search img {
+	width: 60px;
+	height: 60px;
+}
+
+.search a {
+	cursor: pointer;
 }
