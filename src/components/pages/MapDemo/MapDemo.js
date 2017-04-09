@@ -330,7 +330,11 @@ class MapDemo extends React.Component {
 					</div>
 				</div>
 				<div className={reportModalStyle}>
-					<img src={fakeReport}/>
+					<div onClick={this._onCloseReportClick.bind(this)} className={style.reportHide}>
+					</div>
+					<div className={style.reportContent}>
+						<img src={fakeReport}/>
+					</div>
 				</div>
 			</div>
 		);

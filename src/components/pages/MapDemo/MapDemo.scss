@@ -26,25 +26,38 @@
 }
 
 .reportModal {
+	display: none;
+}
+
+.reportModal > .reportContent {
 	position: fixed;
 	display: inline-block;
 	top: 50vh;
 	left: 50vw;
 	transform: translate(-50%, -50%);
 	z-index: 3;
-	display: none;
 	overflow: auto;
 	height: 80vh;
 }
 
 .reportModal.reportModalPop {
 	display: initial;
-	opacity: 1;
 	animation: fade-in 1s;
 }
 
 .reportModal > img {
 	width: 809px;
+}
+
+.reportHide {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	opacity: 0.7;
+	cursor: pointer;
 }
 
 @keyframes fade-in {
