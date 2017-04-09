@@ -1,5 +1,26 @@
+.mainZone {
+	height: calc(100vh - 60px);
+	overflow: hidden;
+}
+
 .map {
 	display: inline-block;
 	width: 100vw;
-	height: 500px;
+	height: calc(100vh - 60px);
+	margin-bottom: 0;
+}
+
+.cardsBarTotal {
+	margin-top: -380px;
+	color: white;
+	width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 400px;
+    // max-width: 2000px;
+}
+
+.cardsBar {
+	margin-top: 320px;
 }

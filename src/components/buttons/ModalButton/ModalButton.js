@@ -5,6 +5,7 @@ class ModalButton extends React.Component {
 		return {
 			width: React.PropTypes.string,
 			height: React.PropTypes.string,
+			lineHeight: React.PropTypes.string,
 		};
 	}
 	render() {
