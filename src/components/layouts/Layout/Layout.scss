@@ -69,3 +69,39 @@
 .menuHidden {
 	right: 0;
 }
+
+.description {
+	margin-top: 80px;
+}
+
+.description > ul {
+	list-style-type: none;
+	font-size: 33px;
+	color: #b4b4b4;
+	text-align: right;
+	padding-right: 40px;
+}
+
+.menu hr {
+	margin: 0 20px 0 20px;
+}
+
+.text {
+	margin: 37px 0 30px 115px;
+	font-size: 20px;
+	color: #b4b4b4;
+}
+
+.form {
+	text-align: center;
+}
+
+.form select {
+	display: block;
+	height: 40px;
+	width: 100px;
+	margin: 0 0 30px 60px;
+	font-size: 16px;
+	border: none;
+	text-align-last: center;
+}
