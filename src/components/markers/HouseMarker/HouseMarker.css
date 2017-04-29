@@ -1,8 +1,9 @@
-.mainZone {
+.HouseMarker-mainZone {
   display: inline;
+  z-index: 2;
 }
 
-.houseMarkerInner {
+.HouseMarker-houseMarkerInner {
   display: inline-block;
   background-color: #ededed;
   border-radius: 50%;
@@ -12,7 +13,7 @@
   top: 2px;
 }
 
-.houseMarkerOuter {
+.HouseMarker-houseMarkerOuter {
   display: inline-block;
   position: relative;
   border: 2px solid #ededed;
@@ -21,10 +22,10 @@
   text-align: center;
 }
 
-.houseMarkerOuter.houseMarkerHover {
+.HouseMarker-houseMarkerOuter.HouseMarker-houseMarkerHover {
   border: 2px solid #ffd800;
 }
 
-.houseMarkerHover .houseMarkerInner {
+.HouseMarker-houseMarkerHover .HouseMarker-houseMarkerInner {
   background-color: #ffd800;
 }

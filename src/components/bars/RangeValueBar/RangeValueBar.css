@@ -1,11 +1,11 @@
-.mainZone {
+.RangeValueBar-mainZone {
 	display: inline-block;
 	position: relative;
 	height: 45px;
 	// border: 1px solid black;
 }
 
-.bar {
+.RangeValueBar-bar {
 	position: absolute;
 	top: 20px;
 	left: 0;
@@ -15,14 +15,14 @@
 	height: 6px;
 }
 
-.typeWord {
+.RangeValueBar-typeWord {
 	position: absolute;
 	top: 0;
 	right: 0;
 	font-size: 1em;
 }
 
-.barFilled {
+.RangeValueBar-barFilled {
 	position: absolute;
 	top: 20px;
 	left: 0;
@@ -32,7 +32,7 @@
 	height: 6px;
 }
 
-.barLeftCircle {
+.RangeValueBar-barLeftCircle {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -42,7 +42,7 @@
 	background-color: #ffd800;
 }
 
-.lowerBoundWord {
+.RangeValueBar-lowerBoundWord {
 	position: absolute;
 	display: inline-block;
 	font-size: 0.5em;
@@ -52,7 +52,7 @@
 	text-align: center;
 }
 
-.barRightCircle {
+.RangeValueBar-barRightCircle {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -63,7 +63,7 @@
 
 }
 
-.higherBoundWord {
+.RangeValueBar-higherBoundWord {
 	position: absolute;
 	display: inline-block;
 	font-size: 0.5em;

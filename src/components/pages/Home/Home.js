@@ -1,5 +1,8 @@
 import React from 'react';
 import RangeValueBar from '../../bars/RangeValueBar/RangeValueBar.js';
+import './Home.css';
+import logo from './logo.png';
+import search from './search.png';
 
 const fakeOptions = [
 	{
@@ -30,6 +33,13 @@ class Home extends React.Component {
 		this.state = {
 			options: fakeOptions
 		};
+		const a = [1, 2, 3, 4, 5];
+		const b = {
+			a: '1',
+			b: '2'
+		}
+		console.log(...a);
+		console.log(...b);
 	}
 	onRangeBarClick(index, newLeftBound, newRightBound) {
 		const newOptions = JSON.parse(JSON.stringify(this.state.options));
@@ -40,17 +50,14 @@ class Home extends React.Component {
 		});
 	}
 	render() {
-		const style = require('./Home.scss');
-		const logo = require('./logo.png');
-		const search = require('./search.png');
 
 		return (
-			<div className={style.home}>
-				<div className={style.logo}>
-					<img src={logo}/>
+			<div className={'Home-home'}>
+				<div className={'Home-logo'}>
+					<img src={logo} alt={'logo'}/>
 				</div>
-				<div className={style.form}>
-					<div className={style.leftForm}>
+				<div className={'Home-form'}>
+					<div className={'Home-leftForm'}>
 						<div>
 							<select>
 								<option value="1">台北市</option>
@@ -65,12 +72,13 @@ class Home extends React.Component {
 							</select>
 						</div>
 					</div>
-					<div className={style.rightForm}>
+					<div className={'Home-rightForm'}>
 						<div>
 							{
 								this.state.options.map( (item, index) => {
 									return (
 										<RangeValueBar
+											key={item.type}
 											onBarClick={this.onRangeBarClick.bind(this, index)}
 											type={item.type}
 											width={item.width}
@@ -84,8 +92,8 @@ class Home extends React.Component {
 							}
 						</div>
 					</div>
-					<div className={style.search}>
-						<a href="/map"><img src={search}/></a>
+					<div className={'Home-search'}>
+						<a href="/map"><img src={search} alt={'search icon'}/></a>
 					</div>
 				</div>
 			</div>

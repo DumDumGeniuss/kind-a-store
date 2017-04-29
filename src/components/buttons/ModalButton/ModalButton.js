@@ -1,4 +1,5 @@
 import React from 'react';
+import './ModalButton.css';
 
 class ModalButton extends React.Component {
 	static get propTypes() {
@@ -9,15 +10,14 @@ class ModalButton extends React.Component {
 		};
 	}
 	render() {
-		const style = require('./ModalButton.scss');
 		const modalButtonCustomStyle = {
 			width: this.props.width,
 			height: this.props.height,
 			lineHeight: this.props.height
 		};
 		return (
-			<div className={style.mainZone}>
-				<span style={modalButtonCustomStyle} className={style.modalButton}>
+			<div className={'ModalButton-mainZone'}>
+				<span style={modalButtonCustomStyle} className={'ModalButton-modalButton'}>
 					hello
 				</span>
 			</div>

@@ -1,16 +1,15 @@
 import React from 'react';
-import { Router, browserHistory } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom'; 
 import routes from './routes.js';
 
-export default class Routes extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+class Routers extends React.Component {
 	render() {
 		return (
-			<Router history={browserHistory}>
+			<Router>
 				{routes}
 			</Router>
 		);
 	}
 }
+
+export default Routers;

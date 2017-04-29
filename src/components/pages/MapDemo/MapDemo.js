@@ -1,8 +1,9 @@
 import React from 'react';
-import ModalButton from '../../buttons/ModalButton/ModalButton.js';
 import HouseMarker from '../../markers/HouseMarker/HouseMarker.js';
 import HouseCard from '../../cards/HouseCard/HouseCard.js';
 import GoogleMapReact from 'google-map-react';
+import fakeReport from './fakeReport.png';
+import './MapDemo.css';
 
 const snazzyMapsStyle = [
     {
@@ -244,20 +245,25 @@ class MapDemo extends React.Component {
 	}
 	_onChildMouseEnter(key, childProps){
 		const order = childProps.order;
-		this.state.houses[order].isCardPop = true;
-		this.setState({
-			houses: this.state.houses
-		})
+
+		this.setState( (state) => {
+			state.houses[order].isCardPop = true;
+			return {
+				houses: state.houses
+			};
+		});
 
 		const bar = document.getElementById('MapDemoCardsBarTotal');
 		bar.scrollLeft = 310 * order;
 	}
 	_onChildMouseLeave(key, childProps){
 		const order = childProps.order;
-		this.state.houses[order].isCardPop = false;
-		this.setState({
-			houses: this.state.houses
-		})
+		this.setState( (state) => {
+			state.houses[order].isCardPop = false;
+			return {
+				houses: state.houses
+			};
+		});
 	}
 	_onBoundsChange(center, zoom, bounds, marginBounds) {
 		// console.log(bar.tagName);
@@ -273,15 +279,19 @@ class MapDemo extends React.Component {
 		});
 	}
 	_onCardMouseEnter(index, e) {
-		this.state.houses[index].isCardPop = true;
-		this.setState({
-			houses: this.state.houses
+		this.setState( (state) => {
+			state.houses[index].isCardPop = true;
+			return {
+				houses: state.houses
+			};
 		});
 	}
 	_onCardMouseLeave(index, e) {
-		this.state.houses[index].isCardPop = false;
-		this.setState({
-			houses: this.state.houses
+		this.setState( (state) => {
+			state.houses[index].isCardPop = false;
+			return {
+				houses: state.houses
+			};
 		});
 	}
 	_onCardClick(index, e) {
@@ -292,12 +302,10 @@ class MapDemo extends React.Component {
 	}
 	render() {
 		const self = this;
-		const fakeReport = require('./fakeReport.png');
-		const style = require('./MapDemo.scss');
-		const reportModalStyle = this.state.reportSwitch ? style.reportModal + ' ' + style.reportModalPop : style.reportModal;
+		const reportModalStyle = this.state.reportSwitch ? 'MapDemo-reportModal MapDemo-reportModalPop' : 'MapDemo-reportModal';
 		return (
-			<div className={style.mainZone}>
-				<div className={style.map}>
+			<div className={'MapDemo-mainZone'}>
+				<div className={'MapDemo-map'}>
 					<GoogleMapReact
 						bootstrapURLKeys={{key: 'AIzaSyC18KPUeNeUQDV0KWAiXnuxcb2vaI6FFg0'}}
 						defaultCenter={{lat: 25, lng: 121.5}}
@@ -314,7 +322,7 @@ class MapDemo extends React.Component {
 							this.state.houses.map( (item, index) => {
 								return (
 									<HouseMarker
-										key={index}
+										key={'marker-' + index}
 										order={index}
 										lat={item.lat}
 										lng={item.lng}
@@ -327,18 +335,19 @@ class MapDemo extends React.Component {
 						}
 					</GoogleMapReact>
 				</div>
-				<div id='MapDemoCardsBarTotal' className={style.cardsBarTotal}>
-					<div className={style.cardsBar}>
+				<div id='MapDemoCardsBarTotal' className={'MapDemo-cardsBarTotal'}>
+					<div className={'MapDemo-cardsBar'}>
 						{
 							this.state.houses.map( (item, index) => {
 								return (
-									<div style={{display: 'inline-block'}}
+									<div
+										key={'card-' + index}
+										style={{display: 'inline-block'}}
 										onMouseEnter={self._onCardMouseEnter.bind(self, index)}
 										onMouseLeave={self._onCardMouseLeave.bind(self, index)}
 										onClick={self._onCardClick.bind(self, index)}
 									>
 										<HouseCard
-											key={index}
 											order={index}
 											addresss={item.addresss}
 											price={item.price}
@@ -359,10 +368,10 @@ class MapDemo extends React.Component {
 					</div>
 				</div>
 				<div className={reportModalStyle}>
-					<div onClick={this._onCloseReportClick.bind(this)} className={style.reportHide}>
+					<div onClick={this._onCloseReportClick.bind(this)} className={'MapDemo-reportHide'}>
 					</div>
-					<div className={style.reportContent}>
-						<img src={fakeReport}/>
+					<div className={'MapDemo-reportContent'}>
+						<img src={fakeReport} alt={'fake report'}/>
 					</div>
 				</div>
 			</div>

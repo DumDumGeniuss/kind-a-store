@@ -4,13 +4,15 @@ import Routes from './routes/index.js';
 
 import { Provider } from 'react-redux';
 import storeCreator from './store/create.js';
+import './index.css';
 
-const app = document.getElementById('app');
+const app = document.getElementById('root');
 
 /**
 * Hydrate the server side State.
 */
-const store = storeCreator(window.__INITIAL_STATE__);
+// const store = storeCreator(window.__INITIAL_STATE__);
+const store = storeCreator({});
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -18,7 +20,3 @@ ReactDOM.render(
 	</Provider>
 , app);
 
-// Let you do the hot-reload while in development mode, google 'webpack-dev-middleware' and 'webpack-hot-middleware'
-if (module.hot) {
-	module.hot.accept();
-}

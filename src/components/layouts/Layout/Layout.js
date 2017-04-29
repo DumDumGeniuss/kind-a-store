@@ -1,4 +1,7 @@
 import React from 'react';
+import './Layout.css';
+import menuIcon from './hamburger.png';
+import logo from './logo.png';
 
 class Layout extends React.Component {
 	static get propTypes() {
@@ -17,30 +20,27 @@ class Layout extends React.Component {
 		});
 	}
 	render() {
-		const style = require('./Layout.scss');
-		const menuIcon = require('./hamburger.png');
-		const logo = require('./logo.png');
 
-		const menuClass = this.state.menuSwitch === true ? style.menu : style.menu + " " + style.menuHidden
+		const menuClass = this.state.menuSwitch === true ? 'Layout-menu' : 'Layout-menu Layout-menuHidden'
 		console.log(menuClass)
 		return (
 			<div>
-				<nav className={style.navbar}>
+				<nav className={'Layout-navbar'}>
 					<div>
-						<a href="#" className={style.menuIcon} onClick={this._onClick.bind(this)}><img src={menuIcon}/></a>
-						<a href="/" className={style.logoIcon}><img src={logo}/></a>
+						<a href="#" className={'Layout-menuIcon'} onClick={this._onClick.bind(this)}><img src={menuIcon} alt={'menu function icon'}/></a>
+						<a href="/" className={'Layout-logoIcon'}><img src={logo} alt={'logo'}/></a>
 					</div>
 				</nav>
 				<div className={menuClass}>
-					<div className={style.description}>
+					<div className={'Layout-description'}>
 						<ul>
 							<li>about</li>
 							<li>contact</li>
 						</ul>
 					</div>
 					<hr/>
-					<div className={style.text}>filter</div>
-					<div className={style.form}>
+					<div className={'Layout-text'}>filter</div>
+					<div className={'Layout-form'}>
 						<select>
 							<option>台北市</option>
 							<option>台中市</option>
@@ -54,7 +54,7 @@ class Layout extends React.Component {
 						</select>
 					</div>
 				</div>
-				<div className={style.content}>
+				<div className={'Layout-content'}>
 					{this.props.children}
 				</div>
 			</div>

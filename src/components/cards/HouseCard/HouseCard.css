@@ -1,9 +1,9 @@
-.mainZone {
+.HouseCard-mainZone {
 	display: inline-block;
 	position: relative;
 }
 
-.card {
+.HouseCard-card {
 	display: inline-block;
 	position: relative;
 	background-color: white;
@@ -17,17 +17,17 @@
 	cursor: pointer;
 }
 
-.card.cardPop {
+.HouseCard-card.HouseCard-cardPop {
 	top: -210px;
 	height: 380px;
 }
 
-.titleZone {
+.HouseCard-titleZone {
 	height: 60px;
 	overflow: hidden;
 }
 
-.priceWord {
+.HouseCard-priceWord {
 	display: inline-block;
 	line-height: 60px;
 	background-color: white;
@@ -36,15 +36,15 @@
 	text-align: left;
 	padding-left: 10px;
 	color: black;
-	font-size: 2.5em;
+	font-size: 2.HouseCard-5em;
 	border-right: 1px solid #DEDEDE;
 }
 
-.priceWord > small {
+.HouseCard-priceWord > small {
 	font-size: 50%;
 }
 
-.areaWord {
+.HouseCard-areaWord {
 	display: inline-block;
 	line-height: 60px;
 	border-top-right-radius: 10px;
@@ -55,11 +55,11 @@
 	font-size: 2em;
 }
 
-.areaWord > small {
+.HouseCard-areaWord > small {
 	font-size: 70%;
 }
 
-.detailZone {
+.HouseCard-detailZone {
 	width: 200px;
 	height: 240px;
 	background-color: #232d38;
@@ -68,7 +68,7 @@
 	// z-index: 2;
 }
 
-.addressWord {
+.HouseCard-addressWord {
 	font-size: 2em;
 	display: inline-block;
 	width: 170px;
@@ -77,11 +77,11 @@
 	margin-top: 15px;
 }
 
-.tagWordsZone {
+.HouseCard-tagWordsZone {
 	margin-top: 15px;
 }
 
-.tagWord {
+.HouseCard-tagWord {
 	font-size: 2em;
 	background-color: yellow;
 	padding: 0px 10px;
@@ -91,12 +91,12 @@
 	margin-right: 5px;
 }
 
-.barZone {
+.HouseCard-barZone {
 	position: relative;
 	height: 30px;
 }
 
-.barWord {
+.HouseCard-barWord {
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -105,7 +105,7 @@
 	color: white;
 }
 
-.bar {
+.HouseCard-bar {
 	display: inline-block;
 	position: absolute;
 	top: 15px;
@@ -115,7 +115,7 @@
 	background-color: white;
 }
 
-.barFill {
+.HouseCard-barFill {
 	display: inline-block;
 	position: absolute;
 	top: 15px;

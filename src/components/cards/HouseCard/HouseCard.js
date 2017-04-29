@@ -1,4 +1,5 @@
 import React from 'react';
+import './HouseCard.css';
 
 class HouseCard extends React.Component {
 	static get propTypes() {
@@ -7,8 +8,7 @@ class HouseCard extends React.Component {
 			width: React.PropTypes.string,
 			height: React.PropTypes.string,
 			left: React.PropTypes.string,
-			isCardPop: React.PropTypes.boolean,
-			order: React.PropTypes.number,
+			isCardPop: React.PropTypes.bool,
 			price: React.PropTypes.number,
 			area: React.PropTypes.number,
 			addresss: React.PropTypes.string,
@@ -26,58 +26,57 @@ class HouseCard extends React.Component {
 		};
 	}
 	render() {
-		const style = require('./HouseCard.scss');
 		const modalButtonCustomStyle = {
 			width: this.props.width,
 			height: this.props.height,
 			lineHeight: this.props.height
 		};
 
-		const cardClass = this.props.isCardPop ? style.card + ' ' + style.cardPop : style.card;
+		const cardClass = this.props.isCardPop ? 'HouseCard-card HouseCard-cardPop' : 'HouseCard-card';
 		return (
-			<div className={style.mainZone}>
+			<div className={'HouseCard-mainZone'}>
 				<div order={this.props.order} style={modalButtonCustomStyle} className={cardClass}>
-					<div className={style.titleZone}>
+					<div className={'HouseCard-titleZone'}>
 						<b>
-							<span className={style.priceWord}>
+							<span className={'HouseCard-priceWord'}>
 								<small>＄ </small> 
 								{this.props.price}
 								<small> 元/月</small> 
 							</span>
 						</b>
 						<b>
-							<span className={style.areaWord}>
+							<span className={'HouseCard-areaWord'}>
 								{this.props.area}
 								<small> 坪</small>
 							</span>
 						</b>
 					</div>
-					<div className={style.detailZone}>
-						<span className={style.addressWord}>
+					<div className={'HouseCard-detailZone'}>
+						<span className={'HouseCard-addressWord'}>
 							{this.props.addresss}
 						</span>
-						<div className={style.tagWordsZone}>
-							<span className={style.tagWord}>
+						<div className={'HouseCard-tagWordsZone'}>
+							<span className={'HouseCard-tagWord'}>
 								{this.props.type}
 							</span>
-							<span className={style.tagWord}>
+							<span className={'HouseCard-tagWord'}>
 								{this.props.age}年
 							</span>
 						</div>
-						<div className={style.barZone}>
-							<span className={style.barWord}>人潮</span>
-							<span className={style.bar}></span>
-							<span style={{width: this.props.crowd * 170 + 'px'}} className={style.barFill}></span>
+						<div className={'HouseCard-barZone'}>
+							<span className={'HouseCard-barWord'}>人潮</span>
+							<span className={'HouseCard-bar'}></span>
+							<span style={{width: this.props.crowd * 170 + 'px'}} className={'HouseCard-barFill'}></span>
 						</div>
-						<div className={style.barZone}>
-							<span className={style.barWord}>交通便利性</span>
-							<span className={style.bar}></span>
-							<span style={{width: this.props.traffic * 170 + 'px'}} className={style.barFill}></span>
+						<div className={'HouseCard-barZone'}>
+							<span className={'HouseCard-barWord'}>交通便利性</span>
+							<span className={'HouseCard-bar'}></span>
+							<span style={{width: this.props.traffic * 170 + 'px'}} className={'HouseCard-barFill'}></span>
 						</div>
-						<div className={style.barZone}>
-							<span className={style.barWord}>消費能力</span>
-							<span className={style.bar}></span>
-							<span style={{width: this.props.consumLevel * 170 + 'px'}} className={style.barFill}></span>
+						<div className={'HouseCard-barZone'}>
+							<span className={'HouseCard-barWord'}>消費能力</span>
+							<span className={'HouseCard-bar'}></span>
+							<span style={{width: this.props.consumLevel * 170 + 'px'}} className={'HouseCard-barFill'}></span>
 						</div>
 					</div>
 				</div>

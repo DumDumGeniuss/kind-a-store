@@ -1,4 +1,4 @@
-.home {
+.Home-home {
 	max-width: 1200px;
 	text-align: center;
 	padding: 100px;
@@ -6,12 +6,12 @@
 	// margin: auto;
 }
 
-.logo img {
+.Home-logo img {
 	width: 360px;
 }
 
 
-.form {
+.Home-form {
 	width: 450px;
 	height: 200px;
 	border-radius: 15px;
@@ -22,7 +22,7 @@
 	transform: translate(0%, 0%);
 }
 
-.leftForm {
+.Home-leftForm {
 	position: absolute;
 	top: 0;
 	left: 5%;
@@ -34,7 +34,7 @@
 	flex-direction: column;
 }
 
-.leftForm select {
+.Home-leftForm select {
 	display: block;
 	font-size: 15px;
 	height: 40px;
@@ -44,7 +44,7 @@
 	border: none;
 }
 
-.rightForm {
+.Home-rightForm {
 	position: absolute;
 	top: 0;
 	right: 5%;
@@ -56,7 +56,7 @@
 	// flex-direction: column;
 }
 
-.rightForm > div {
+.Home-rightForm > div {
 	height: 45%;
 	display: inline-flex;
 	justify-content: space-around;
@@ -64,24 +64,24 @@
 	flex-direction: column;
 }
 
-.text {
+.Home-text {
 	margin-left: 100px;
 	margin-top: 40px;
 	color: #c1c1c1;
 	margin-right: 25px;
 }
 
-.search {
+.Home-search {
 	position: absolute;
 	right: -30px;
 	top: 120px;
 }
 
-.search img {
+.Home-search img {
 	width: 60px;
 	height: 60px;
 }
 
-.search a {
+.Home-search a {
 	cursor: pointer;
 }

@@ -1,8 +1,8 @@
-.mainZone {
+.ModalButton-mainZone {
 	display: inline;
 }
 
-.modalButton {
+.ModalButton-modalButton {
 	display: inline-block;
 	background-color: red;
 	border: 1px solid red;
@@ -11,6 +11,6 @@
 	text-align: center;
 }
 
-.modalButton:hover {
+.ModalButton-modalButton:hover {
 	color: yellow;
 }

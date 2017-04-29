@@ -1,15 +1,16 @@
 import React from 'react';
+import './RangeValueBar.css';
 
 class RangeValueBar extends React.Component {
 	static get propTypes() {
 		return {
 			type: React.PropTypes.string,
-			width: React.PropTypes.string,
+			width: React.PropTypes.number,
 			minBound: React.PropTypes.number, 
 			maxBound: React.PropTypes.number,
 			leftBound: React.PropTypes.number,
 			rightBound: React.PropTypes.number,
-			onBarClick: React.PropTypes.function
+			onBarClick: React.PropTypes.func
 		};
 	}
 	_onClickBar(id, e) {
@@ -35,18 +36,17 @@ class RangeValueBar extends React.Component {
 		);
 	}
 	render() {
-		const style = require('./RangeValueBar.scss');
 		const maxRange = this.props.maxBound - this.props.minBound;
 		const leftCoeffecient = (this.props.leftBound - this.props.minBound) / maxRange;
 		const rightCoeffecient = (this.props.rightBound - this.props.minBound) / maxRange;
 		const fullBarWidth = (rightCoeffecient - leftCoeffecient) * this.props.width;
 
 		return (
-			<div id={'RangeValueBarEmpty'} onClick={this._onClickBar.bind(this, 'RangeValueBarEmpty')} style={{width: this.props.width}} className={style.mainZone}>
-				<span className={style.typeWord}>{this.props.type}</span>
+			<div id={'RangeValueBarEmpty'} onClick={this._onClickBar.bind(this, 'RangeValueBarEmpty')} style={{width: this.props.width}} className={'RangeValueBar-mainZone'}>
+				<span className={'RangeValueBar-typeWord'}>{this.props.type}</span>
 				<div
 					style={{width: this.props.width}}
-					className={style.bar}
+					className={'RangeValueBar-bar'}
 				>
 				</div>
 				<div
@@ -55,12 +55,12 @@ class RangeValueBar extends React.Component {
 						width: fullBarWidth,
 						left: leftCoeffecient * this.props.width
 					}}
-					className={style.barFilled}
+					className={'RangeValueBar-barFilled'}
 				>
-					<div className={style.barLeftCircle}></div>
-					<span className={style.lowerBoundWord}>{this.props.leftBound}</span>
-					<div className={style.barRightCircle}></div>
-					<span className={style.higherBoundWord}>{this.props.rightBound}</span>
+					<div className={'RangeValueBar-barLeftCircle'}></div>
+					<span className={'RangeValueBar-lowerBoundWord'}>{this.props.leftBound}</span>
+					<div className={'RangeValueBar-barRightCircle'}></div>
+					<span className={'RangeValueBar-higherBoundWord'}>{this.props.rightBound}</span>
 				</div>
 			</div>
 		);

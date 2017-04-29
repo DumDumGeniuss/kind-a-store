@@ -1,4 +1,4 @@
-.navbar {
+.Layout-navbar {
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -6,19 +6,19 @@
 	z-index: 3;
 }
 
-.navbar > div {
+.Layout-navbar > div {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.content {
+.Layout-content {
 	background-color: #232d38;
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.navbar > div > a {
+.Layout-navbar > div > a {
 	display: inline-flex;
 	height: 60px;
 	align-items: center;
@@ -29,32 +29,32 @@
 	font-weight: bold;
 }
 
-.navbar > div > a:hover {
+.Layout-navbar > div > a:hover {
 	cursor: pointer;
 }
 
-.menuIcon {
+.Layout-menuIcon {
 	float: right;
 	padding-right: 15px;
 }
 
-.menuIcon > img {
+.Layout-menuIcon > img {
 	height: 20px;
 	width: 25px;
 }
 
-.logoIcon {
+.Layout-logoIcon {
 	float: right;
 	padding: 0px 15px;
 }
 
-.logoIcon > img {
+.Layout-logoIcon > img {
 	width: 106px;
 	height: 36px;
 
 }
 
-.menu {
+.Layout-menu {
 	position: fixed;
 	display: inline-block;
 	right: -200px;
@@ -66,15 +66,15 @@
 	z-index: 2;
 }
 
-.menuHidden {
+.Layout-menuHidden {
 	right: 0;
 }
 
-.description {
+.Layout-description {
 	margin-top: 80px;
 }
 
-.description > ul {
+.Layout-description > ul {
 	list-style-type: none;
 	font-size: 33px;
 	color: #b4b4b4;
@@ -82,21 +82,21 @@
 	padding-right: 40px;
 }
 
-.menu hr {
+.Layout-menu hr {
 	margin: 0 20px 0 20px;
 }
 
-.text {
+.Layout-text {
 	margin: 37px 0 30px 115px;
 	font-size: 20px;
 	color: #b4b4b4;
 }
 
-.form {
+.Layout-form {
 	text-align: center;
 }
 
-.form select {
+.Layout-form select {
 	display: block;
 	height: 40px;
 	width: 100px;

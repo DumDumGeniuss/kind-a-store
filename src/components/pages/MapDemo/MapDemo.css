@@ -1,16 +1,16 @@
-.mainZone {
+.MapDemo-mainZone {
 	height: calc(100vh);
 	overflow: hidden;
 }
 
-.map {
+.MapDemo-map {
 	display: inline-block;
 	width: 100vw;
 	height: calc(100vh);
 	margin-bottom: 0;
 }
 
-.cardsBarTotal {
+.MapDemo-cardsBarTotal {
 	margin-top: -380px;
 	color: white;
 	width: 100vw;
@@ -21,15 +21,15 @@
     // max-width: 2000px;
 }
 
-.cardsBar {
+.MapDemo-cardsBar {
 	margin-top: 320px;
 }
 
-.reportModal {
+.MapDemo-reportModal {
 	display: none;
 }
 
-.reportModal > .reportContent {
+.MapDemo-reportModal > .MapDemo-reportContent {
 	position: fixed;
 	display: inline-block;
 	top: 50vh;
@@ -40,16 +40,16 @@
 	height: 80vh;
 }
 
-.reportModal.reportModalPop {
+.MapDemo-reportModal.MapDemo-reportModalPop {
 	display: initial;
 	animation: fade-in 1s;
 }
 
-.reportModal > img {
+.MapDemo-reportModal > img {
 	width: 809px;
 }
 
-.reportHide {
+.MapDemo-reportHide {
 	position: fixed;
 	top: 0;
 	left: 0;
