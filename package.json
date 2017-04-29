@@ -2,7 +2,7 @@
   "name": "dumdumgenius-blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dumdumgeniuss.github.io/",
+  "homepage": "https://dumdumgeniuss.github.io/kind-a-store",
   "dependencies": {
     "google-map-react": "^0.24.0",
     "react": "^15.5.4",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && react-snapshot",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "yarn build && gh-pages -d build"

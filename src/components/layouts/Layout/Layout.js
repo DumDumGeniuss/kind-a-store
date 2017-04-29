@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import './Layout.css';
 import menuIcon from './hamburger.png';
 import logo from './logo.png';
@@ -27,8 +28,8 @@ class Layout extends React.Component {
 			<div>
 				<nav className={'Layout-navbar'}>
 					<div>
-						<a href="#" className={'Layout-menuIcon'} onClick={this._onClick.bind(this)}><img src={menuIcon} alt={'menu function icon'}/></a>
-						<a href="/" className={'Layout-logoIcon'}><img src={logo} alt={'logo'}/></a>
+						<Link to={"#"} className={'Layout-menuIcon'} onClick={this._onClick.bind(this)}><img src={menuIcon} alt={'menu function icon'}/></Link>
+						<Link to={"/"} className={'Layout-logoIcon'}><img src={logo} alt={'logo'}/></Link>
 					</div>
 				</nav>
 				<div className={menuClass}>

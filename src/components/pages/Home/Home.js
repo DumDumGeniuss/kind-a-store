@@ -1,5 +1,6 @@
 import React from 'react';
 import RangeValueBar from '../../bars/RangeValueBar/RangeValueBar.js';
+import { Link } from 'react-router-dom'; 
 import './Home.css';
 import logo from './logo.png';
 import search from './search.png';
@@ -33,13 +34,6 @@ class Home extends React.Component {
 		this.state = {
 			options: fakeOptions
 		};
-		const a = [1, 2, 3, 4, 5];
-		const b = {
-			a: '1',
-			b: '2'
-		}
-		console.log(...a);
-		console.log(...b);
 	}
 	onRangeBarClick(index, newLeftBound, newRightBound) {
 		const newOptions = JSON.parse(JSON.stringify(this.state.options));
@@ -93,7 +87,7 @@ class Home extends React.Component {
 						</div>
 					</div>
 					<div className={'Home-search'}>
-						<a href="/map"><img src={search} alt={'search icon'}/></a>
+						<Link to="/map"><img src={search} alt={'search icon'}/></Link>
 					</div>
 				</div>
 			</div>
